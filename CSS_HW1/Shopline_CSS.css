@@ -1,0 +1,360 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.more_bg{
+    background-color: #f4f5f7;
+    padding:50px 0 50px 0;
+}
+.other_bg{
+    background-color: #00142d;
+}
+
+.n{
+    width: 100%;
+    background-color: #00142d;
+}
+.des{
+    text-align: center;
+    padding:40px;
+}
+.des h2{
+    font-size: 35px;
+    padding: 20px;
+}
+.des p{
+    font-size: 16px;    
+}
+.help{
+    width: 1300px;
+    background-color: #00142d;
+}
+.help nav{
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.help a{
+    text-decoration: none;
+    color: #fff;
+    margin-left:20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin:20px 100px 20px 100px;
+}
+.logo img{
+    width: 70%;
+}
+.logo nav{
+    flex-grow: 1;  
+}
+.logo a{    
+    text-decoration: none;
+    color: #00142D;
+    margin:0 5px 0 5px;
+}
+.logo .btn a{
+    color:#fff;
+    font-size: 15px;
+}
+
+
+.serve nav{
+    margin-left: 30px;
+}
+.serve a{
+    text-decoration: none;
+}
+
+.main{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: url(bg1.png);
+}
+.main .txt h1{
+    font-size: 35px;
+    text-align: left;
+}
+.main .txt {
+    color:#fff;
+}
+.main .txt span{
+    color:#0061FF;
+}
+
+.btn{
+    background: #0061FF;
+    border-radius: 20px; 
+    text-align: center;
+    color: #fff;
+    border: 0;
+    padding:10px;
+}
+.input {
+    background: unset;
+    border: 1px solid #fff;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    color: #fff;
+    padding-left: 0;
+    font-size: 15px;
+    width: 45%
+}
+
+.row{
+    width: 1100px;
+    display: flex;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.row:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.row .txt{
+    margin: 10px;
+}
+.row i{
+    background-color:lightskyblue;
+    border-radius: 100%;
+    color:#0061FF;
+    vertical-align: middle;
+}
+.row .txt h3{
+    font-size: 35px;
+    padding: 5px 0 5px 0;
+}
+.txt p, .txt a{
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+}
+.list{
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.icon img {
+    width: 5%;
+}
+.list div{
+    width: 50%;
+}
+.row a{
+    text-decoration: none;
+}
+.row .img{
+    width: 100%;
+}
+
+.center_title{
+    padding-top:30px;
+    text-align: center;
+}
+
+
+
+.more{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: auto;
+    justify-content: space-between;
+}
+.more_bg h2{
+    font-size: 35px;
+    text-align: center;
+}
+.more .content{
+    margin: 20px;
+}
+
+.more .content .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.more .content h3{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.more p{
+    font-size: 11px;
+}
+
+.recommend .brand{
+    width:1300px;
+    display:flex;
+    justify-content: space-evenly;
+    margin:auto;
+    margin-bottom: 40px;
+}
+.recommend h2{
+    text-align: center;
+    font-size: 35px;
+    margin: 40px 0 40px 0;
+}
+
+.recommend h2 span{
+    color:#0061FF
+}
+
+.recommend .brand .intro p{
+    font-size: 11px;
+}
+.intro{
+    width:1300px;
+    margin:auto;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.intro .txt{
+    width: 40%;
+}
+.intro .txt a{
+    margin-bottom: 20px;
+}
+.intro .txt p{
+    margin: 20px 0 90px 0;
+    font-size: 15px;
+}
+
+.intro img{
+    width: 50%;
+}
+.free{
+    color:#fff;
+    width: 1300px;
+    margin:auto;
+    padding: 70px 0 70px 0;
+    background: url(bg2.png);
+    /* background: url(bg3.png); */
+    background-position: right;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.free h2{
+    font-size: 35px; 
+}
+.free .txt{
+    width: 50%;
+}
+.free img{
+    width: 50%;
+}
+.free a{
+    text-decoration: none;
+}
+
+
+.other{
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    background-color: #00142d;
+}
+.other .sub{
+    list-style: none;
+    color:#fff;
+}
+.other li{
+    list-style: none;
+    color:#748094;
+}
+.other li{
+    margin: 10px 0 10px 0;
+}
+
+.other .sub{
+    font-size: 18px;
+    font-weight:900;
+    padding-bottom: 30px;
+}
+
+.bottom_link {
+    width: 1300px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom_link .website_info{
+    display: flex;
+    width:250px;
+    font-size: 15px;
+    justify-content: space-around;
+}
+.bottom_link .social{
+    display: flex;
+    width:300px;
+    margin:auto;
+    font-size: 22px;
+    justify-content: space-around;
+}
+.bottom_link .social a{
+    justify-content: space-around;
+}
+.bottom_link a{
+    text-decoration: none;
+    color:#fff;
+}
+.bottom_link span{
+    color:#748094;
+    font-size: 15px;
+}
