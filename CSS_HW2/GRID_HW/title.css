@@ -1,0 +1,54 @@
+section{
+    width: 960px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    margin: auto;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.title-info{
+    grid-column: 1/8;
+    grid-row: 1/8;
+    color: #fff;
+    position: relative;
+}
+section:nth-of-type(even) .title-info{
+    grid-column: 13/21;
+    grid-row: 1/8;
+}
+.title-info h2{
+    background-color: darkred;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+}
+section:nth-of-type(even) .title-info h2{
+    flex-direction: row-reverse;
+}
+.title-info h2 span{
+    writing-mode: vertical-lr;
+    font-size: 120px;
+    margin-left: -22px;
+}
+section:nth-of-type(even) .title-info h2 span{
+    margin-right: -22px;
+    padding-left: 30px;
+}
+.title-info .title-info-sub{
+    background-color: #000;
+    position: absolute;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.title-info .title-info-sub h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    padding: 20px 0 6px 0;
+}
+.title-info .title-info-sub p{
+    margin: 0 20px;
+    padding-bottom: 60px;
+}

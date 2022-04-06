@@ -1,0 +1,54 @@
+.revolution-list{
+    grid-column: 2/16;
+    grid-row: 11/16;
+    background-color: #eeeeee;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+section:nth-of-type(even) .revolution-list{
+    grid-column: 7/21;
+    margin-top: 20px;
+    margin-right: -2px;
+}
+.revolution-list .slogan{
+    padding: 20px 20px 8px;
+    font-size: 18px;
+    color: darkred;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+.revolution-list .slogan::after{
+    content: '';
+    height: 1px;
+    background-color: darkred;
+    flex-grow: 1;
+    margin-left: 6px;
+    margin-right: 1em;
+}
+
+.revolution-list h3{
+    background-color: #000;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px;
+}
+.revolution-list p{
+    margin-left: 10px;
+    line-height: 1.5;
+    padding-left: 1.5em;
+    position: relative;
+    padding-top: 5px;
+}
+.revolution-list p::before{
+    content: '';
+    background-color: darkred;
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 1em;
+    top:0.8em;
+}

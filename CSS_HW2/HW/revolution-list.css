@@ -1,0 +1,53 @@
+.revolution-list{
+    width: 640px;
+    background-color: #eeeeee;
+    position: relative;
+    z-index: 5;
+    margin-left: 40px;
+    margin-top: -2em;
+}
+
+.revolution-list .slogan{
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
+    padding: 20px 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    
+}
+.revolution-list .slogan::after{
+    content: '';
+    background-color: darkred;
+    display: block;
+    height: 2px;
+    flex-grow: 1;
+    margin-left: 0.5em;
+    margin-right: 2em;
+}
+
+.revolution-list h3{
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    padding: 7px 4px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.revolution-list p{
+    padding-left: 2em;
+    position: relative;
+    line-height: 1.5;
+}
+
+.revolution-list p::before{
+    content: '';
+    background-color: #f00;
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 1em;
+    top:0.7em;
+}

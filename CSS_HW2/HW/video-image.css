@@ -1,0 +1,38 @@
+.video-image{
+    width: 680px;
+    display: flex;
+    align-items: center;
+    margin-left: 160px;
+}
+section:nth-of-type(even) .video-image{
+    margin-left: 0;
+    flex-direction: row-reverse;
+}
+.video-image .bg-img{
+    width: 670px;
+    margin-right: -40px;
+}
+section:nth-of-type(even) .video-image .bg-img{
+    margin-right: 0;
+    margin-left: -60px;
+}
+.video-image .bg-img::after{
+    content: '';
+    width: 400px;
+    height: 250px;
+    background-color: #eeeeee;
+    position: absolute;
+    z-index: -2;
+    top: 40px;
+    right:60px;
+}
+section:nth-of-type(even) .video-image .bg-img::after{
+    width: 520px;
+    height: 400px;
+    top: 20px;
+    right:200px;
+}
+.video-image .play-btn{
+    width: 70px;
+    vertical-align: middle;
+}
