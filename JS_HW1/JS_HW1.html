@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: auto;
+            text-align: center;
+        }
+        .profile-img{
+            display: flex;
+            justify-content: center;
+        }
+        .img{
+            display: flex;
+            justify-content: space-around;
+        }
+        img{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="profile-img">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+        <div id="name">姓名:aaa</div>
+        <div id="email">E-mail:bbb</div>
+        <div id="school">學校:ccc</div>
+        <div id="interest">興趣:ddd</div>
+        <div id="img">
+            <img src="https://img.avdb.me/eyny/upload/vod/20210518-28/3b594e5ab2528b6ff0659e2fc7e27f2b.jpg">
+            <img src="https://tafttoday.com/wp-content/uploads/2019/05/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_-1-568x900.jpg">
+            <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg">
+        </div>
+    </div>
+    
+
+    <script>
+        
+
+
+
+        let info = ["aaa","bbb","ccc"];
+        
+        let interest = ["ddd", "eee"];
+        document.getElementById("name").innerText = "Name: " + myself[0];
+        document.getElementById("email").innerText = "E-mail: " + myself[1];
+        document.getElementById("school").innerText = "school: " + myself[2];
+        document.getElementById("interest").innerText = "interest: ";
+
+
+        interest.forEach((item,index)=>{
+            if(index==interest.length - 1){
+                document.getElementById("interest").innerText += " " + item;
+            }
+            else{
+                document.getElementById("interest").innerText += " " + item + ",";
+            }
+        });
+
+        const imageArray = [
+            "https://img.avdb.me/eyny/upload/vod/20210518-28/3b594e5ab2528b6ff0659e2fc7e27f2b.jpg",
+            "https://tafttoday.com/wp-content/uploads/2019/05/MV5BZTliNWJhM2YtNDc1MC00YTk1LWE2MGYtZmE4M2Y5ODdlNzQzXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_-1-568x900.jpg",
+            "https://www.themoviedb.org/t/p/w220_and_h330_face/zzXFM4FKDG7l1ufrAkwQYv2xvnh.jpg"
+        ];
+
+    </script>
+</body>
+</html>
