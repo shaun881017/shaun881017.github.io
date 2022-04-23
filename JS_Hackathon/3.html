@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container w-75 border border-2 py-3">
+        <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-primary" id="start">Start</button>
+            <button type="button" class="btn btn-primary" id="answer" disabled>See Answer</button>
+            <button type="button" class="btn btn-primary" id="reset" disabled>Reset</button>
+        </div>
+        <div class="history py-3"></div>
+        <div class="input-group w-100 py-3">
+            <input type="text" class="form-control w-75" placeholder="Enter 4 different number" maxlength="4" id="input"
+                disabled>
+            <button type="button" class="btn btn-primary w-25" id="guess" disabled>Guess</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        window.onload = function () {
+            let container = document.querySelector('.container');
+            let start = document.querySelector('#start');
+            let reset = document.querySelector('#reset');
+            let answer = document.querySelector('#answer');
+            let input = document.querySelector('#input');
+            let guess = document.querySelector('#guess');
+            let history = document.querySelector('.history');
+
+            let ans = rand('0123456789'.split('')).join('').substring(0, 4);
+
+            start.addEventListener('click', () => {
+                start.disabled = true;
+                answer.disabled = false;
+                reset.disabled = false;
+                input.disabled = false;
+                guess.disabled = false;
+
+
+                guess.addEventListener('click', () => {
+                    let guessnum = document.getElementById('input').value;
+
+                    if (guessnum.length == 0) {
+                        alert('Please enter numbers');
+                        input.value = '';
+                    }
+                    else if (guessnum.length != 4) {
+                        alert('Please 4 different numbers');
+                        input.value = '';
+                    }
+                    else if (checkDup(guessnum)) {
+                        input.value = '';
+                        alert('No duplicate numbers');
+                        return;
+                    }
+
+                    input.value = '';
+                    let ul = document.createElement('ul');
+                    let li = document.createElement('li');
+                    let span = document.createElement('span');
+
+                    ul.setAttribute('class', 'list-group');
+                    li.setAttribute('class', 'list-group-item d-flex');
+                    span.setAttribute('class', 'badge bg-danger me-2');
+
+                    let ab = compare(ans, guessnum);
+                    span.innerHTML = `${ab[0]}A${ab[1]}B`;
+
+                    if (ab[0] == 4) {
+                        span.setAttribute('class', 'badge bg-success me-2');
+                        guess.disabled = true;
+                        alert("You win");
+                        answer.disabled = true;
+                    }
+                    li.append(span, guessnum);
+                    ul.append(li);
+                    history.append(ul);
+
+                    reset.addEventListener('click', () => {
+                        location.reload()
+                    });
+                });
+                answer.addEventListener('click', () => {
+                    alert(`Answer is ${ans}`);
+                });
+
+            });
+
+        }
+        // generator random number
+        function rand(ans) {
+            for (let i = ans.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1));
+                let temp = ans[i];
+                ans[i] = ans[j];
+                ans[j] = temp;
+            }
+            return ans;
+        }
+        // check input duplicate
+        function checkDup(input) {
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] == input[i + 1]) {
+                    return true;
+                }
+            }
+        }
+        // compare
+        function compare(ans, input) {
+            let a = 0; b = 0;
+            for (let i = 0; i < ans.length; i++) {
+                for (let j = 0; j < input.length; j++) {
+                    if (ans[i] == input[j]) {
+                        b++;
+                        if (ans.indexOf(ans[i]) == input.indexOf(input[j])) {
+                            a++;
+                            b--;
+                        }
+                    }
+                }
+            }
+            return [a, b];
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
