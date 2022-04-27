@@ -17,8 +17,10 @@
         <div class="d-grid mx-auto">
             <button class="btn btn-primary mt-2" id="play" type="button">play</button>
             <div class="btngroup d-flex">
-                <button class="btn btn-outline-primary w-100 mt-2 fw-bold" id="show-answer" type="button" disabled>See answer</button>
-                <button class="btn btn-outline-primary w-100 mt-2 fw-bold" id="reset" type="button" disabled>Restart</button>
+                <button class="btn btn-outline-primary w-100 mt-2 fw-bold" id="show-answer" type="button" disabled>See
+                    answer</button>
+                <button class="btn btn-outline-primary w-100 mt-2 fw-bold" id="reset" type="button"
+                    disabled>Restart</button>
             </div>
             <span class="border border-2 py-1 my-2 text-center" id="hint"></span>
             <input type="text" class="form-control mb-3" id="input" disabled>
@@ -30,7 +32,7 @@
                 <button type="button" class="btn btn-dark mx-1" id="number">2</button>
                 <button type="button" class="btn btn-dark" id="number">3</button>
             </div>
-            
+
             <div class="row-cols-4 d-flex justify-content-around mb-2">
                 <button type="button" class="btn btn-dark" id="number">4</button>
                 <button type="button" class="btn btn-dark mx-1" id="number">5</button>
@@ -78,16 +80,8 @@
                 });
 
                 $('.numberpad #check').click(function () {
-                    if(input.value.length == 0){
-                        alert('Press button to enter password between 0 and 100');
-                        $('#input').val('');
-                    }
-                    else if (input.value > M) {
-                        alert('Press button to enter password between 0 and 100');
-                        $('#input').val('');
-                    }
-                    else if($('#input').val() == m || $('#input').val() == M){
-                        alert('Please enter number in range');
+                    if (input.value.length == 0 || input.value < m || input.value > M || $('#input').val() == m || $('#input').val() == M) {
+                        alert(`Press button to enter password between ${m} and ${M}`);
                         $('#input').val('');
                     }
                     else if ($('#input').val() < rnd) {
@@ -112,6 +106,7 @@
                     location.reload();
                 })
             });
+
         }
     </script>
 

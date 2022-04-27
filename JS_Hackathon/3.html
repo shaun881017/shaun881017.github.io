@@ -12,7 +12,16 @@
 </head>
 
 <body>
-    <div class="container w-75 border border-2 py-3">
+    <div class="container w-75 border border-2 py-3 ">
+        <div class="information w-50 my-2 m-auto">
+            <ol class="list-group list-group-numbered">
+                <h1 class="text-center">1A2B</h1>
+                <li class="list-group-item">Press Start to play</li>
+                <li class="list-group-item">No Duplicate number in each guess</li>
+                <li class="list-group-item">No less than 4 number each guess</li>
+                <li class="list-group-item">Limit up to 4 number each guess</li>
+            </ol>
+        </div>
         <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
             <button type="button" class="btn btn-primary" id="start">Start</button>
             <button type="button" class="btn btn-primary" id="answer" disabled>See Answer</button>
@@ -25,10 +34,6 @@
             <button type="button" class="btn btn-primary w-25" id="guess" disabled>Guess</button>
         </div>
     </div>
-
-
-
-
 
     <script>
         window.onload = function () {
@@ -49,17 +54,18 @@
                 input.disabled = false;
                 guess.disabled = false;
 
-
                 guess.addEventListener('click', () => {
                     let guessnum = document.getElementById('input').value;
 
                     if (guessnum.length == 0) {
                         alert('Please enter numbers');
                         input.value = '';
+                        return;
                     }
                     else if (guessnum.length != 4) {
                         alert('Please 4 different numbers');
                         input.value = '';
+                        return;
                     }
                     else if (checkDup(guessnum)) {
                         input.value = '';
@@ -96,7 +102,6 @@
                 answer.addEventListener('click', () => {
                     alert(`Answer is ${ans}`);
                 });
-
             });
 
         }
@@ -104,9 +109,7 @@
         function rand(ans) {
             for (let i = ans.length - 1; i > 0; i--) {
                 let j = Math.floor(Math.random() * (i + 1));
-                let temp = ans[i];
-                ans[i] = ans[j];
-                ans[j] = temp;
+                [ans[i], ans[j]] = [ans[j], ans[i]];
             }
             return ans;
         }
@@ -135,18 +138,6 @@
             return [a, b];
         }
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
