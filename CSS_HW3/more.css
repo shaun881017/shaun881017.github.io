@@ -1,0 +1,68 @@
+.more{
+    background-color: #F4F5F7;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.more-function-container h2{
+    font-size: 35px;
+    font-weight: 900;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.more-function-container .more-function{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.more-function-container .more-function .group{
+    width: 50%;
+    line-height: 2;
+}
+
+.more-function-container .more-function .group .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    box-shadow: 0 0 12px rgb(0 0 0 / 50%);
+}
+.more-function-container .more-function .group .img img{
+    width: 60%;
+}
+.more-function-container .more-function .group h3{
+    font-size: 20px;
+    text-align: center;
+    padding: 1em 1em 0 1em;
+}            
+.more-function-container .more-function .group p{
+    text-align: left;
+    padding: 0 2em 1em 2em;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width:475px){
+    .more-function-container .more-function .group{
+        width: 33.333333%;
+    }
+}
+
+@media screen and (min-width:992px){
+    
+    .more-function-container{
+        width: 1200px;
+        padding: 1em 0;
+        margin: auto;
+    }
+    .more-function-container .more-function .group{
+        width: 33.333333%;
+        padding-bottom: 80px;
+    }
+}
+
