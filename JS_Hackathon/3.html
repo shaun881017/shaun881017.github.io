@@ -55,12 +55,12 @@
                     if (guessnum.length == 0) {
                         alert('Please enter numbers');
                         input.value = '';
-                        return
+                        return;
                     }
                     else if (guessnum.length != 4) {
                         alert('Please 4 different numbers');
                         input.value = '';
-                        return
+                        return;
                     }
                     else if (checkDup(guessnum)) {
                         input.value = '';
