@@ -1,0 +1,85 @@
+.footer{
+    background-color: #00142d;
+}
+.footer-list, .covid, .footer-link{
+    margin: 0 2em;
+}
+.footer-list .list-menu .list{
+    padding: 1em 0;
+    position: relative;
+}
+/* .footer-list .list-menu .list::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #aaa;
+} */
+.footer-list .list-menu .list{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#footer-list-control{
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+#footer-list-control:checked ~ .footer-list .list-menu .list nav{
+    display: block;
+    background-color: #00142d;
+}
+.footer-list .list-menu .list nav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+.footer-list .list-menu .list nav a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin:  2em 2em;
+    color: #748094;
+}
+
+.footer .covid{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 2em;
+}
+.footer .covid a{
+    padding: 8px 3em;
+    background-color: #fff;
+    border: 1px solid;
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (min-width:475px){
+    .footer .covid{
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:992px){
+    
+    .footer i{
+        display: none;
+    }
+    
+    .footer-list .list-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .footer-list .list-menu .list{
+    }
+    .footer-list .list-menu .list nav{
+        display: block;
+    }
+    .footer-list .list-menu .list nav a{
+        margin-right: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+}

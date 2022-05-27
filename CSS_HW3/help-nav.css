@@ -1,0 +1,82 @@
+/* .help{
+    background-color: #00142d;
+    padding: 12px;
+    display: flex;
+    font-size: 14px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.help .language{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.help .language button{
+    border: none;
+    background: none;
+    color: #fff;
+}
+.help .language::after{
+    content: '';
+    display: inline-block;
+    width: 0.01em;
+    height: 1em;
+    background-color: #fff;
+}
+.help nav{
+    margin-right: 80px;
+}
+.help nav a{
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+} */
+.help{
+    display: none;
+}
+
+@media screen and (min-width:992px){
+    .help{
+        width: 100%;
+        display: block;
+        background-color: #00142D;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+    }
+    .help .container{
+        padding: .3em 0;
+        width: 1500px;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .help .container .language{
+        display: flex;
+        width: 2em;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .help .container .language i{
+        color: #fff;
+        background-color: #00142d;
+    }
+    .help .container .language i::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 1.05em;
+        background-color: #fff;
+        margin-left: 10px;
+    }
+    .help .container nav{
+        padding: .5em 0;
+    }
+    .help .container nav a{
+        color: #fff;
+        text-decoration: none;
+        margin: 1em;
+    }
+}

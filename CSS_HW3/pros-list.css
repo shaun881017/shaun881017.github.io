@@ -1,0 +1,133 @@
+.pros{
+    margin: 2em;
+}
+
+.sub-title{
+    padding: 1.5em 0;
+    text-align: center;
+    line-height: 1.5;;
+}
+
+.sub-title h2{
+    font-size: 30px;
+    font-weight: 900;
+    padding: 1em 0;
+}
+.sub-title p{
+    font-size: 17px;
+}
+.pros-list::after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #ccc;
+    margin: auto;
+    margin: 60px 2em;
+}
+.pros-list .txt{
+    line-height: 1.5;
+}
+.pros-list .txt h3{
+    font-size: 28px;
+    font-weight: 900;
+    padding: 20px;
+    line-height: 1.5;
+}
+.pros-list .txt h3::after{
+    content: '';
+    display: block;
+    width: 2em;
+    height: 2px;
+    background-color: #fa0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.pros-list .txt p{
+    padding: 0 20px 1em 20px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.pros-list .txt .list{
+    padding: 0 1em;
+    font-size: 17px;
+}
+.pros-list .txt .list .icon{
+    padding: 0.4em 0;
+}
+.pros-list .txt .list .icon i{
+    color:#0061ff;
+    padding: 4px;
+    background-color:#DEEBFF;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-size: 10px;
+}
+.pros-list .txt a{
+    padding: 1.7em;
+    display: block;
+    text-decoration: none;
+    color:#0061ff;
+    font-size: 17px;
+}
+.pros-list .txt a i{
+    padding-left: 10px;
+}
+
+@media screen and (min-width:475px){
+
+    .sub-title h2{
+        font-size: 35px;
+    }
+    .sub-title p{
+        margin: 1em 3em;
+        font-size: 17px;
+    }
+    .pros-list .txt .list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pros-list .txt .list .icon{
+        width: calc(50% - 3em);
+        font-size: 17px;
+    }
+
+    .pros-list .txt h3{
+       font-size: 34px; 
+       padding: 1em;
+    }
+    
+    @media screen and (min-width:992px) {
+        .sub-title{
+            margin: auto;
+            margin-bottom: 2em;
+            width: 1200px;
+        }
+        .sub-title p{
+            width: 50%;
+            margin: auto;
+        }
+        .pros{
+            width: 1200px;
+            margin: auto;
+        }
+        .pros-list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pros-list:nth-of-type(odd){
+            flex-direction: row-reverse;
+        }
+        .pros-list .txt{
+            width: 50%;
+        }
+        .pros-list .img{
+            width: 50%;
+        }
+        .pros-list::after{
+            display: none;
+        }
+    }
+}

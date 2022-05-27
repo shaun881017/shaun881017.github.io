@@ -1,0 +1,92 @@
+.footer{
+    color: #172b4d;
+}
+.footer-link .community nav{
+    display: flex;
+    margin: 0 2em 2em 2em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-link .community nav a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #172b4d;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+
+.footer-link .policy nav{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-link .policy nav a{
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 1em;
+}
+
+.footer-link .service-time p{
+    text-align: center;
+    padding: 2em 3em 150px 3em;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #748094;
+}
+
+#language-control{
+    display: none;
+}
+#language-contro:checked ~ .language nav{
+    display: block;
+    background-color: #fff;
+}
+
+.language{
+    position: relative;
+    background-color: #000f22;
+    margin-right: 2em;
+}
+.language span{
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    background-color: #000f22;
+    padding: 2em 0 2em 2em;
+}
+.language nav{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2em;
+    width: 150px;
+    display: none;
+}
+.language nav a{
+    width: 50%;
+}
+
+@media screen and (min-width:475px){
+    .footer-link .policy nav{
+        display: block;
+        padding: 2em;
+        text-align: left;
+        margin-left: 0;
+    }
+}
+
+@media screen  and (min-width:992px){
+    .language{
+        position: relative;
+    }
+    .language span{
+        position: absolute;
+        display: none;
+    }
+}

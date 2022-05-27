@@ -1,0 +1,66 @@
+.brand-recommend .brand-img{
+    display: none;
+}
+
+.brand-recommend h2{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 1em 0;
+}
+
+.brand-recommend h2 span{
+    color: #0061ff;
+}
+
+.brand-recommend .brand:nth-child(1){
+    display: block;
+}
+
+.brand-recommend .brand{
+    display: none;
+}
+.brand-recommend .brand {
+    margin: auto 1.5em;
+    
+}
+.brand-recommend .brand img{
+    width: 100%;
+    padding-bottom: 1em;
+}
+.brand-recommend .brand a{
+    text-decoration: none;
+    color:#0061ff;
+    font-size: 17px;
+}
+.brand-recommend .brand a i{
+    padding-left: 1em;
+}
+.brand-recommend .brand p{
+    padding: 1em 0;
+    line-height: 2;
+}
+
+@media screen and (min-width:992px){
+    .brand-recommend{
+        width: 1200px;
+        margin: auto;
+    }
+    .brand-recommend .brand-img{
+        display: flex;
+        justify-content: space-between;
+    }
+    .brand-recommend .brand-info .brand{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .brand-recommend .brand-info .brand img{
+        width: 50%;
+    }
+    .brand-recommend .brand-info .brand .txt{
+        width: 50%;
+    }
+    
+
+}
